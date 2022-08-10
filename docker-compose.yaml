@@ -1,0 +1,34 @@
+version: '3'
+services:
+ mssql-server:
+  image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
+  container_name: mssql-server
+  environment:
+   ACCEPT_EULA: "Y"
+   SA_PASSWORD: "Password.1234"
+  ports:
+   - "1433:1433"
+ timemanager.api:
+  build: ../TimeManager.API/
+  environment:
+   DatabaseServer: "mssql-server"
+   DatabasePort: "1433"
+   DatabaseUser: "sa"
+   DatabasePassword: "Password.1234"
+   DatabaseName: "TimeManagerDB"
+  depends_on:
+   - mssql-server
+  ports:
+   - "8090:80"
+ timemanager.idp:
+  build: ../TimeManager.IdP/
+  environment:
+   DatabaseServer: "mssql-server"
+   DatabasePort: "1433"
+   DatabaseUser: "sa"
+   DatabasePassword: "Password.1234"
+   DatabaseName: "TimeManagerDB"
+  depends_on:
+   - mssql-server
+  ports:
+   - "9090:90"
