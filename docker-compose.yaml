@@ -8,8 +8,6 @@ services:
    SA_PASSWORD: "Password.1234"
   ports:
    - "1433:1433"
-  networks:
-   - bridge
  timemanager.api:
   build: ../TimeManager.API/
   container_name: timemanager.api
@@ -23,8 +21,6 @@ services:
    - mssql-server
   ports:
    - "8090:80"
-  networks:
-   - bridge
  timemanager.idp:
   build: ../TimeManager.IdP/
   container_name: timemanager.idp
@@ -38,8 +34,3 @@ services:
    - mssql-server
   ports:
    - "8080:80"
-  networks:
-   - bridge
-networks:
- bridge:
-  external: true
