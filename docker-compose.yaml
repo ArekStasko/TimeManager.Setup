@@ -8,6 +8,19 @@ services:
    SA_PASSWORD: "Password.1234"
   ports:
    - "1433:1433"
+ seq:
+  image: datalust/seq:latest
+  container_name: timemanager.logs.seq
+  ports:
+   - "5341:80"
+  environment:
+   ACCEPT_EULA: Y
+  restart: unless-stopped
+  volumes:
+   - ./seq-data:/data
+  depends_on:
+   - timemanager.api
+   - timemanager.idp
  timemanager.api:
   build: ../TimeManager.API/
   container_name: timemanager.api
@@ -16,7 +29,7 @@ services:
    DatabasePort: "1433"
    DatabaseUser: "sa"
    DatabasePassword: "Password.1234"
-   DatabaseName: "TimeManagerDB"
+   DatabaseName: "TimeManager_API"
   depends_on:
    - mssql-server
   ports:
@@ -29,8 +42,8 @@ services:
    DatabasePort: "1433"
    DatabaseUser: "sa"
    DatabasePassword: "Password.1234"
-   DatabaseName: "TimeManagerDB"
+   DatabaseName: "TimeManager_IdP"
   depends_on:
-   - mssql-server
+   - timemanager.api
   ports:
    - "8080:80"
