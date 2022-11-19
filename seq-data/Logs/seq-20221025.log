@@ -1,0 +1,23 @@
+{"@t":"2022-10-25T19:59:44.5019340Z","@mt":"Seq {SeqVersion} running on OS {OSCaption}","SeqVersion":"2022.1.7929","OSCaption":"Linux 5.10.124-linuxkit #1 SMP Thu Jun 30 08:19:10 UTC 2022","SourceContext":"Seq.Server.Features.Diagnostics.EnvironmentInformationWriter"}
+{"@t":"2022-10-25T19:59:44.6513681Z","@mt":"Seq detected {TotalRAM} MB of RAM","TotalRAM":2081.394688,"SourceContext":"Seq.Server.Features.Diagnostics.EnvironmentInformationWriter"}
+{"@t":"2022-10-25T19:59:45.1332056Z","@mt":"Opening event store at {StreamPath}","StreamPath":"/data/Stream/stream.flare","SourceContext":"Flare.Cluster.StorageNodeCoordinator"}
+{"@t":"2022-10-25T19:59:45.7499384Z","@mt":"Ingestion enabled","SourceContext":"Flare.Cluster.StorageNodeCoordinator"}
+{"@t":"2022-10-25T19:59:45.7587546Z","@mt":"Cache warm-up is required","SourceContext":"Flare.Cache.SegmentCache","OperationId":"fe1b0bca-99ec-42f7-b55a-202d1dc548fc"}
+{"@t":"2022-10-25T19:59:45.7714495Z","@mt":"Opening metastore {MetastorePath}","MetastorePath":"/data/Documents/metastore.flare","SourceContext":"Quince.Storage.Native.NativeDocumentStore"}
+{"@t":"2022-10-25T19:59:45.9670268Z","@mt":"Storage subsystem available"}
+{"@t":"2022-10-25T19:59:46.1066354Z","@mt":"Seq listening on {ListenUris}","ListenUris":["http://localhost/","https://localhost/","http://localhost:5341/","https://localhost:45341/"]}
+{"@t":"2022-10-25T19:59:47.4016342Z","@mt":"Initial memory cache warm-up {Outcome} in {Elapsed:0.0} ms","@r":["1642.7"],"Outcome":"completed","Elapsed":1642.6796,"OperationId":"fe1b0bca-99ec-42f7-b55a-202d1dc548fc"}
+{"@t":"2022-10-25T19:59:47.4034642Z","@mt":"{WarmSegments} segments warmed up ({@Shared})","WarmSegments":1104,"Shared":{"Schemata":114,"Strings":1976},"SourceContext":"Flare.Cache.SegmentCache"}
+{"@t":"2022-10-25T20:00:23.3888407Z","@mt":"Termination signal received"}
+{"@t":"2022-10-25T20:00:23.4168551Z","@mt":"Signalling for {Workers} worker task(s) to complete","Workers":3,"SourceContext":"Flare.Workers.WorkerPool"}
+{"@t":"2022-10-25T20:00:23.4707497Z","@mt":"Work {WorkDescription} ({WorkId}) observed cancellation and completed","WorkDescription":"Manage event cache resources","WorkId":"3812d80b-6912-47a2-a521-44c97cacd845","SourceContext":"Flare.Workers.WorkerPool"}
+{"@t":"2022-10-25T20:00:24.2375637Z","@mt":"Work {WorkDescription} ({WorkId}) observed cancellation and completed","WorkDescription":"Monitor alerts and trigger notifications","WorkId":"71e75ed4-d6a0-40ed-9e69-32b8285b5d20","SourceContext":"Flare.Workers.WorkerPool"}
+{"@t":"2022-10-25T20:00:25.7630155Z","@mt":"Work {WorkDescription} ({WorkId}) observed cancellation and completed","WorkDescription":"Sample system memory","WorkId":"eb10871d-2e48-4a7c-a47a-d2d1e6aa9229","SourceContext":"Flare.Workers.WorkerPool"}
+{"@t":"2022-10-25T20:00:25.8240249Z","@mt":"Stopping {Tasks} scheduled tasks","Tasks":15,"SourceContext":"Seq.Server.Tasks.TaskRunner"}
+{"@t":"2022-10-25T20:00:25.8276488Z","@mt":"Stopping input channel","SourceContext":"Seq.Server.Features.Apps.Inputs.InputChannel"}
+{"@t":"2022-10-25T20:00:26.1435922Z","@mt":"Shutting down input channel; {AcceptedCount} queued events will be written","AcceptedCount":0,"SourceContext":"Seq.Server.Features.Apps.Inputs.InputChannel"}
+{"@t":"2022-10-25T20:00:26.1455322Z","@mt":"Stopping broadcast channel","SourceContext":"Flare.Broadcast.BroadcastChannel"}
+{"@t":"2022-10-25T20:00:27.1385641Z","@mt":"Shutting down broadcast channel with {AllowableFlush} flushable event batches (+{Tolerance} tolerance)","AllowableFlush":0,"Tolerance":15,"SourceContext":"Flare.Broadcast.BroadcastChannel"}
+{"@t":"2022-10-25T20:00:27.1439152Z","@mt":"Closing event store","SourceContext":"Flare.Cluster.StorageNodeCoordinator"}
+{"@t":"2022-10-25T20:00:27.1454036Z","@mt":"Closing metastore","SourceContext":"Quince.Storage.Native.NativeDocumentStore"}
+{"@t":"2022-10-25T20:00:27.1486318Z","@mt":"Server stopped cleanly"}

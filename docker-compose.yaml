@@ -7,20 +7,13 @@ services:
    ACCEPT_EULA: "Y"
    SA_PASSWORD: "Password.1234"
   ports:
-   - "1433:1433"
- ocelot:
-  image: thinkco/ocelot
-  container_name: timemanager.gateway
+   - "1433:1433" 
+ rabbitmq:
+  build: ./rabbitmq/
+  container_name: rabbitmq
   ports:
-   - "1080:80"
-  environment:
-   ACCEPT_EULA: "Y"
-  volumes:
-   - ./ocelotgateway:/data
-  depends_on:
-   - timemanager.api
-   - timemanager.idp
-   - seq
+   - "5672:5672"
+   - "15672:15672"
  seq:
   image: datalust/seq:latest
   container_name: timemanager.logs.seq
@@ -32,11 +25,32 @@ services:
   volumes:
    - ./seq-data:/data
   depends_on:
-   - timemanager.api
+   - timemanager.data
    - timemanager.idp
- timemanager.api:
-  build: ../TimeManager.API/
-  container_name: timemanager.api
+ timemanager.gateway:
+  build: ../TimeManager.Gateway/
+  container_name: timemanager.gateway
+  ports:
+   - "8070:80"
+  depends_on:
+   - mssql-server
+ timemanager.processingengine:
+  build: ../TimeManager.ProcessingEngine
+  container_name: timemanager.processingengine
+  environment:
+   DatabaseServer: "mssql-server"
+   DatabasePort: "1433"
+   DatabaseUser: "sa"
+   DatabasePassword: "Password.1234"
+   DatabaseName: "TimeManager_ProcessingEngine"
+  depends_on:
+   - timemanager.gateway
+   - mssql-server
+  ports:
+   - "8060:80"
+ timemanager.data:
+  build: ../TimeManager.DATA/
+  container_name: timemanager.data
   environment:
    DatabaseServer: "mssql-server"
    DatabasePort: "1433"
@@ -44,6 +58,8 @@ services:
    DatabasePassword: "Password.1234"
    DatabaseName: "TimeManager_API"
   depends_on:
+   - timemanager.gateway
+   - timemanager.processingengine
    - mssql-server
   ports:
    - "8090:80"
@@ -57,6 +73,7 @@ services:
    DatabasePassword: "Password.1234"
    DatabaseName: "TimeManager_IdP"
   depends_on:
-   - timemanager.api
+   - timemanager.gateway
+   - timemanager.data
   ports:
    - "8080:80"

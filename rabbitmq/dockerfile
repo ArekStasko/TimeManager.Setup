@@ -1,0 +1,8 @@
+FROM rabbitmq:3-management-alpine
+
+COPY rabbitmq.conf /etc/rabbitmq
+COPY definitions.json /etc/rabbitmq
+
+EXPOSE 15672
+
+RUN cat /etc/rabbitmq/rabbitmq.conf
