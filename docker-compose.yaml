@@ -1,5 +1,11 @@
 version: '3'
 services:
+ rabbitmq:
+  build: ./rabbitmq/
+  container_name: rabbitmq
+  ports:
+   - "5672:5672"
+   - "15672:15672"
  mssql-server:
   image: mcr.microsoft.com/mssql/server:2017-latest-ubuntu
   container_name: mssql-server
@@ -8,25 +14,6 @@ services:
    SA_PASSWORD: "Password.1234"
   ports:
    - "1433:1433" 
- rabbitmq:
-  build: ./rabbitmq/
-  container_name: rabbitmq
-  ports:
-   - "5672:5672"
-   - "15672:15672"
- seq:
-  image: datalust/seq:latest
-  container_name: timemanager.logs.seq
-  ports:
-   - "5341:80"
-  environment:
-   ACCEPT_EULA: "Y"
-  restart: unless-stopped
-  volumes:
-   - ./seq-data:/data
-  depends_on:
-   - timemanager.data
-   - timemanager.idp
  timemanager.gateway:
   build: ../TimeManager.Gateway/
   container_name: timemanager.gateway
@@ -34,20 +21,7 @@ services:
    - "8070:80"
   depends_on:
    - mssql-server
- timemanager.processingengine:
-  build: ../TimeManager.ProcessingEngine
-  container_name: timemanager.processingengine
-  environment:
-   DatabaseServer: "mssql-server"
-   DatabasePort: "1433"
-   DatabaseUser: "sa"
-   DatabasePassword: "Password.1234"
-   DatabaseName: "TimeManager_ProcessingEngine"
-  depends_on:
-   - timemanager.gateway
-   - mssql-server
-  ports:
-   - "8060:80"
+   - rabbitmq
  timemanager.data:
   build: ../TimeManager.DATA/
   container_name: timemanager.data
@@ -59,8 +33,7 @@ services:
    DatabaseName: "TimeManager_API"
   depends_on:
    - timemanager.gateway
-   - timemanager.processingengine
-   - mssql-server
+   - rabbitmq
   ports:
    - "8090:80"
  timemanager.idp:
@@ -74,6 +47,34 @@ services:
    DatabaseName: "TimeManager_IdP"
   depends_on:
    - timemanager.gateway
-   - timemanager.data
+   - rabbitmq
   ports:
    - "8080:80"
+ timemanager.processingengine:
+  build: ../TimeManager.ProcessingEngine
+  container_name: timemanager.processingengine
+  environment:
+   DatabaseServer: "mssql-server"
+   DatabasePort: "1433"
+   DatabaseUser: "sa"
+   DatabasePassword: "Password.1234"
+   DatabaseName: "TimeManager_ProcessingEngine"
+  restart: unless-stopped
+  depends_on:
+   - timemanager.idp
+   - timemanager.data
+  ports:
+   - "8060:80"
+ seq:
+  image: datalust/seq:latest
+  container_name: timemanager.logs.seq
+  ports:
+   - "5341:80"
+  environment:
+   ACCEPT_EULA: "Y"
+  restart: unless-stopped
+  volumes:
+   - ./seq-data:/data
+  depends_on:
+   - timemanager.data
+   - timemanager.idp
