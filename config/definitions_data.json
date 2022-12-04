@@ -1,0 +1,13 @@
+{
+    "usersdata":{
+        "name": ["guest"],
+        "password_hash": ["BMfxN8drrYcIqXZMr+pWTpDT0nMcOagMduLX0bjr4jwud/pN"],
+        "tags": [ ["administrator"] ]
+    },
+    "vhosts": ["/"],
+    "names":{
+        "queues": ["entity.activity.post-queue", "entity.activity.delete-queue", "entity.activity.update-queue"],
+        "exchanges": ["entity.activity.post", "entity.activity.delete", "entity.activity.update"],
+        "routingKey": ["Activity_Post", "Activity_Delete", "Activity_Update"]
+    }
+}
