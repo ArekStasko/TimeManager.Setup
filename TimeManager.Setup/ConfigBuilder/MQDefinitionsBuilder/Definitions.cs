@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace TimeManager.Setup.ConfigBuilder
 {
@@ -22,7 +23,7 @@ namespace TimeManager.Setup.ConfigBuilder
         public string password_hash { get; set; }
         public string hashing_algorithm { get; set; } = "rabbit_password_hashing_sha256";
         public string[] tags { get; set; }
-        public Limits limits { get; set; } = null;
+        public Limits limits { get; set; } = new Limits();
     }
 
     public class Vhosts
@@ -57,7 +58,7 @@ namespace TimeManager.Setup.ConfigBuilder
         public bool? durable { get; set; } = true;
         public bool? auto_delete{ get; set; } = false;
         public bool? @internal { get; set; } = false;
-        public Arguments? arguments { get; set; } = new Arguments();
+        public Object? arguments { get; set; } = new Object();
     }
 
     public class Bindings
@@ -67,12 +68,15 @@ namespace TimeManager.Setup.ConfigBuilder
         public string? destination { get; set; }
         public string? destination_type { get; set; } = "queue";
         public string? routing_key { get; set; }
-        public Arguments? arguments { get; set; } = new Arguments();
+        public Object? arguments { get; set; } = new Object();
     }
 
     public class Arguments
     {
+        [JsonProperty(PropertyName = "x-queue-mode")]
         public string? xqueuemode { get; set; } = null;
+
+        [JsonProperty(PropertyName = "x-queue-type")]
         public string? xqueuetype { get; set; } = null;
     }
 

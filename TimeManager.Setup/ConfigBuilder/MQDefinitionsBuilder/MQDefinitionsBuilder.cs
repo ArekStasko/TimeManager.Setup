@@ -58,6 +58,7 @@ namespace TimeManager.Setup.ConfigBuilder
                 var binding = new Bindings()
                 {
                     source = configFile.names.exchanges[i],
+                    destination =configFile.names.queues[i],
                     routing_key = configFile.names.routingKey[i]
                 };
                 definitions.bindings.Add(binding);
@@ -72,21 +73,15 @@ namespace TimeManager.Setup.ConfigBuilder
             return definitions;
         }
 
+
         public void Execute()
         {
             var definitionsData = JsonConvert.SerializeObject(definitions);
             string path = $"{PathService.GetConfigFilePath()}\\rabbitmq\\definitions.json";
 
-            if (!File.Exists(path))
-            {
-                using FileStream fs = File.Create(path);
-            }
 
-
-
-            
-
-            File.WriteAllText($"{PathService.GetConfigFilePath()}definitions.json", definitionsData);
+            FileService.CreateFile(path);
+            FileService.WriteData($"{PathService.GetConfigFilePath()}\\rabbitmq\\definitions.json", definitionsData);
         }
     }
 }
