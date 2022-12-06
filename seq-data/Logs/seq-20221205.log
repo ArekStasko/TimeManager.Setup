@@ -674,3 +674,16 @@
 {"@t":"2022-12-05T20:12:03.8944237Z","@mt":"Memory is overutilized, so cooling down segment {Segment} ({HotCount} events)","Segment":"2022-12-05T19:00:00.0000000Z","HotCount":584,"SourceContext":"Flare.Cache.SegmentCache"}
 {"@t":"2022-12-05T20:12:03.8948268Z","@mt":"Memory is overutilized, so cooling down segment {Segment} ({HotCount} events)","Segment":"2022-12-05T20:00:00.0000000Z","HotCount":533,"SourceContext":"Flare.Cache.SegmentCache"}
 {"@t":"2022-12-05T20:12:50.7787679Z","@mt":"{CollectionCount} more generation 2 garbage collection(s) occurred","CollectionCount":3,"SourceContext":"Seq.Server.Features.Diagnostics.GCLogger"}
+{"@t":"2022-12-05T20:14:14.6047206Z","@mt":"Termination signal received"}
+{"@t":"2022-12-05T20:14:14.6198314Z","@mt":"Signalling for {Workers} worker task(s) to complete","Workers":3,"SourceContext":"Flare.Workers.WorkerPool"}
+{"@t":"2022-12-05T20:14:14.9263038Z","@mt":"Work {WorkDescription} ({WorkId}) observed cancellation and completed","WorkDescription":"Monitor alerts and trigger notifications","WorkId":"a0adad9d-17b6-498d-aeca-4faa8bcdb114","SourceContext":"Flare.Workers.WorkerPool"}
+{"@t":"2022-12-05T20:14:14.9574375Z","@mt":"Work {WorkDescription} ({WorkId}) observed cancellation and completed","WorkDescription":"Manage event cache resources","WorkId":"a152cdfc-389c-40b4-a216-377bbb6c1353","SourceContext":"Flare.Workers.WorkerPool"}
+{"@t":"2022-12-05T20:14:15.3619231Z","@mt":"Work {WorkDescription} ({WorkId}) observed cancellation and completed","WorkDescription":"Sample system memory","WorkId":"8e71d25c-2c26-4b93-ad9a-79b4c9fdce2d","SourceContext":"Flare.Workers.WorkerPool"}
+{"@t":"2022-12-05T20:14:15.4235167Z","@mt":"Stopping {Tasks} scheduled tasks","Tasks":15,"SourceContext":"Seq.Server.Tasks.TaskRunner"}
+{"@t":"2022-12-05T20:14:15.4288935Z","@mt":"Stopping input channel","SourceContext":"Seq.Server.Features.Apps.Inputs.InputChannel"}
+{"@t":"2022-12-05T20:14:15.7708903Z","@mt":"Shutting down input channel; {AcceptedCount} queued events will be written","AcceptedCount":0,"SourceContext":"Seq.Server.Features.Apps.Inputs.InputChannel"}
+{"@t":"2022-12-05T20:14:15.7719365Z","@mt":"Stopping broadcast channel","SourceContext":"Flare.Broadcast.BroadcastChannel"}
+{"@t":"2022-12-05T20:14:16.7474101Z","@mt":"Shutting down broadcast channel with {AllowableFlush} flushable event batches (+{Tolerance} tolerance)","AllowableFlush":0,"Tolerance":15,"SourceContext":"Flare.Broadcast.BroadcastChannel"}
+{"@t":"2022-12-05T20:14:16.7503348Z","@mt":"Closing event store","SourceContext":"Flare.Cluster.StorageNodeCoordinator"}
+{"@t":"2022-12-05T20:14:16.7513206Z","@mt":"Closing metastore","SourceContext":"Quince.Storage.Native.NativeDocumentStore"}
+{"@t":"2022-12-05T20:14:16.7529442Z","@mt":"Server stopped cleanly"}

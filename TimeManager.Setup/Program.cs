@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using TimeManager.Setup.ConfigBuilder;
+using TimeManager.Setup.CommandScheduler;
 
-var builder = new MQDefinitionsBuilder();
-builder.Execute();
+var initialize = new InputInitialization();
+initialize.Execute();
