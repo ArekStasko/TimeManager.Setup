@@ -8,11 +8,11 @@ using TimeManager.Setup.Services;
 
 namespace TimeManager.Setup.CommandScheduler
 {
-    public class ViewOptions
+    public class View
     {
         private Commands AvailableCommands { get; set; }
 
-        public ViewOptions()
+        public View()
         {
             AvailableCommands = InitializeCommands();
         }
@@ -24,6 +24,13 @@ namespace TimeManager.Setup.CommandScheduler
         }
         public Commands GetAvailableCommands() => AvailableCommands;
 
+        public void PrintInfo(string msg) => Console.WriteLine(msg);
+        public void PrintInputInfo(string msg) 
+        {
+            PrintInfo(msg);
+            Console.Write("> ");
+        }
+        
         public void PrintAvailableCommands()
         {
             Console.WriteLine("Available commands :");
