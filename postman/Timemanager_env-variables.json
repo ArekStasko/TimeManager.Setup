@@ -1,0 +1,45 @@
+{
+	"id": "b4d13170-6d33-4e7c-9c20-45f53fff1139",
+	"name": "TimeManager",
+	"values": [
+		{
+			"key": "GATEWAY",
+			"value": "http://localhost:8070/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "IdP",
+			"value": "http://localhost:8080/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "TOKEN",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "USERID",
+			"value": "1",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "TASKID",
+			"value": "1",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "TASKSETID",
+			"value": "1",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2022-12-27T20:30:48.348Z",
+	"_postman_exported_using": "Postman/10.6.7"
+}

@@ -1,0 +1,6 @@
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\publish\TimeManager.Setup.exe
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\publish\TimeManager.Setup.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\publish\TimeManager.Setup.deps.json
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\publish\TimeManager.Setup.runtimeconfig.json
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\publish\TimeManager.Setup.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\publish\Newtonsoft.Json.dll

@@ -70,6 +70,16 @@ namespace TimeManager.Setup.ConfigBuilder
                 definitions.exchanges.Add(exchange);
             }
 
+            for (int i = 0; i < configFile.names.reply.Length; i++)
+            {
+                var replyQueue = new Queues()
+                {
+                    name = configFile.names.reply[i]
+                };
+                definitions.queues.Add(replyQueue);
+
+            }
+
             return definitions;
         }
 

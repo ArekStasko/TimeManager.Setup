@@ -30,7 +30,7 @@ services:
    DatabasePort: "1433"
    DatabaseUser: "sa"
    DatabasePassword: "Password.1234"
-   DatabaseName: "TimeManager_API"
+   DatabaseName: "TimeManager_DATA"
   depends_on:
    - timemanager.gateway
    - rabbitmq

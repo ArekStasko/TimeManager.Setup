@@ -6,8 +6,9 @@
     },
     "vhosts": ["/"],
     "names":{
-        "queues": ["entity.activity.post-queue", "entity.activity.delete-queue", "entity.activity.update-queue"],
-        "exchanges": ["entity.activity.post", "entity.activity.delete", "entity.activity.update"],
-        "routingKey": ["Activity_Post", "Activity_Delete", "Activity_Update"]
+        "reply": ["entity.task.post-reply", "entity.task.delete-reply", "entity.task.update-reply"],
+        "queues": ["entity.task.post-queue", "entity.task.delete-queue", "entity.task.update-queue"],
+        "exchanges": ["entity.task.post", "entity.task.delete", "entity.task.update"],
+        "routingKey": ["task_Post", "task_Delete", "task_Update"]
     }
 }

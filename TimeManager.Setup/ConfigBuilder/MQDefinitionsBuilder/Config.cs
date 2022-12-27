@@ -23,6 +23,7 @@ namespace TimeManager.Setup.ConfigBuilder
 
     public class Names
     {
+        public string[] reply { get; set; }
         public string[] queues { get; set; }
         public string[] exchanges { get; set; }
         public string[] routingKey { get; set; }

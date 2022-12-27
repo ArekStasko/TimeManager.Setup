@@ -21,15 +21,19 @@ namespace TimeManager.Setup.CommandScheduler
 
             string[] input = Console.ReadLine().Split(" ");
 
-            while(input.Length < 2 || input.Length > 2)
+            while (input.Length < 2 || input.Length > 2)
             {
                 view.PrintInputInfo("Wrong Command");
+
+                Console.Write("> ");
                 input = Console.ReadLine().Split(" ");
             }
 
             while (!commands.AvailableCommands.Contains(input[1]) || commands.Alias != input[0])
             {
                 view.PrintInputInfo("Wrong Command");
+
+                Console.Write("> ");
                 input = Console.ReadLine().Split(" ");
             }
 

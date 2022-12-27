@@ -1,0 +1,488 @@
+{
+	"info": {
+		"_postman_id": "41e926e8-dd06-469c-aca2-03d7912f4d22",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11070618"
+	},
+	"item": [
+		{
+			"name": "TimeManager.ProcessingEngine",
+			"item": []
+		},
+		{
+			"name": "TimeManager.IdP",
+			"item": [
+				{
+					"name": "RegisterUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"TOKEN\", data.token);\r",
+									"postman.setEnvironmentVariable(\"USERID\", data.userId);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IdP}}api/Auth/Register/register/",
+							"host": [
+								"{{IdP}}api"
+							],
+							"path": [
+								"Auth",
+								"Register",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LoginUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"TOKEN\", data.token);\r",
+									"postman.setEnvironmentVariable(\"USERID\", data.userId);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"string\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IdP}}api/Auth/Login/login/",
+							"host": [
+								"{{IdP}}api"
+							],
+							"path": [
+								"Auth",
+								"Login",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "VerifyToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"token\": \"{{TOKEN}}\",\r\n  \"userId\": {{USERID}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{IdP}}api/token/VerifyToken/verifyToken",
+							"host": [
+								"{{IdP}}api"
+							],
+							"path": [
+								"token",
+								"VerifyToken",
+								"verifyToken"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TimeManager.Data",
+			"item": [
+				{
+					"name": "Task",
+					"item": [
+						{
+							"name": "GetTasks",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": \"\",\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/Task/Get?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"Task",
+										"Get"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetTaskById",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {{TASKID}},\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/Task/GetById?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"Task",
+										"GetById"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostTask",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"id\": 0,\r\n    \"name\": \"string\",\r\n    \"description\": \"string\",\r\n    \"type\": \"string\",\r\n    \"dateAdded\": \"2022-12-27T19:58:12.041Z\",\r\n    \"dateCompleted\": \"2022-12-27T19:58:12.041Z\",\r\n    \"deadline\": \"2022-12-27T19:58:12.041Z\",\r\n    \"priority\": 0,\r\n    \"userId\": 0\r\n  },\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/Task/Post?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"Task",
+										"Post"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteTask",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {{TASKID}},\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/Task/Delete?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"Task",
+										"Delete"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateTask",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"id\": {{TASKID}},\r\n    \"name\": \"string title after update\",\r\n    \"description\": \"string\",\r\n    \"type\": \"string\",\r\n    \"dateAdded\": \"2022-12-27T20:01:47.279Z\",\r\n    \"dateCompleted\": \"2022-12-27T20:01:47.279Z\",\r\n    \"deadline\": \"2022-12-27T20:01:47.279Z\",\r\n    \"priority\": 0,\r\n    \"userId\": {{USERID}}\r\n  },\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/Task/Update?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"Task",
+										"Update"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "TaskSet",
+					"item": [
+						{
+							"name": "GetTaskSetById",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {{TASKSETID}},\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/TaskSet/GetById?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"TaskSet",
+										"GetById"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllTaskSets",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": \"\",\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/TaskSet/GetAll?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"TaskSet",
+										"GetAll"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteTaskSet",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {{TASKSETID}},\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/TaskSet/Delete?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"TaskSet",
+										"Delete"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "PostTaskSet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"id\": 0,\r\n    \"userId\": 0,\r\n    \"taskOccurencies\": [\r\n      {\r\n        \"id\": 0,\r\n        \"date\": \"2022-12-27T20:10:29.142Z\"\r\n      }\r\n    ],\r\n    \"task\": {\r\n      \"id\": {{TASKID}},\r\n      \"name\": \"string\",\r\n      \"description\": \"string\",\r\n      \"type\": \"string\",\r\n      \"dateAdded\": \"2022-12-27T20:10:29.142Z\",\r\n      \"dateCompleted\": \"2022-12-27T20:10:29.142Z\",\r\n      \"deadline\": \"2022-12-27T20:10:29.142Z\",\r\n      \"priority\": 0,\r\n      \"userId\": 0\r\n    }\r\n  },\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/TaskSet/Post?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"TaskSet",
+										"Post"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateTaskSet",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"data\": {\r\n    \"id\": {{TASKSETID}},\r\n    \"userId\": {{USERID}},\r\n    \"taskOccurencies\": [\r\n      {\r\n        \"id\": 0,\r\n        \"date\": \"2022-12-27T20:14:47.944Z\"\r\n      }\r\n    ],\r\n    \"task\": {\r\n      \"id\": {{TASKID}},\r\n      \"name\": \"string\",\r\n      \"description\": \"string\",\r\n      \"type\": \"string\",\r\n      \"dateAdded\": \"2022-12-27T20:14:47.944Z\",\r\n      \"dateCompleted\": \"2022-12-27T20:14:47.944Z\",\r\n      \"deadline\": \"2022-12-27T20:14:47.944Z\",\r\n      \"priority\": 0,\r\n      \"userId\": {{USERID}}\r\n    }\r\n  },\r\n  \"userId\": {{USERID}}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY}}data/TaskSet/Update?token={{TOKEN}}",
+									"host": [
+										"{{GATEWAY}}data"
+									],
+									"path": [
+										"TaskSet",
+										"Update"
+									],
+									"query": [
+										{
+											"key": "token",
+											"value": "{{TOKEN}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}

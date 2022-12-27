@@ -2,4 +2,7 @@
 using TimeManager.Setup.CommandScheduler;
 
 var scheduler = new Scheduler();
-scheduler.Schedule();
+while (true)
+{
+    scheduler.Schedule();
+}

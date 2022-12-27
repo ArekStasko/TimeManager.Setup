@@ -1,0 +1,17 @@
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.Setup.exe
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.Setup.deps.json
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.Setup.runtimeconfig.json
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.Setup.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.Setup.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\Newtonsoft.Json.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.csproj.AssemblyReference.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.AssemblyInfoInputs.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.AssemblyInfo.cs
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.csproj.CoreCompileInputs.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.csproj.CopyComplete
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\refint\TimeManager.Setup.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.genruntimeconfig.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\ref\TimeManager.Setup.dll
