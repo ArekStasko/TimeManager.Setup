@@ -6,9 +6,9 @@
     },
     "vhosts": ["/"],
     "names":{
-        "reply": ["entity.task.post-reply", "entity.task.delete-reply", "entity.task.update-reply"],
-        "queues": ["entity.task.post-queue", "entity.task.delete-queue", "entity.task.update-queue"],
-        "exchanges": ["entity.task.post", "entity.task.delete", "entity.task.update"],
-        "routingKey": ["task_Post", "task_Delete", "task_Update"]
+        "reply": ["entity.task.post-reply", "entity.task.delete-reply", "entity.task.update-reply", "entity.taskSet.post-reply", "entity.taskSet.delete-reply", "entity.taskSet.update-reply"],
+        "queues": ["entity.task.post-queue", "entity.task.delete-queue", "entity.task.update-queue", "entity.taskSet.post-queue", "entity.taskSet.delete-queue", "entity.taskSet.update-queue"],
+        "exchanges": ["entity.task.post", "entity.task.delete", "entity.task.update", "entity.taskSet.post", "entity.taskSet.delete", "entity.taskSet.update"],
+        "routingKey": ["task_Post", "task_Delete", "task_Update", "taskSet_Post", "taskSet_Delete", "taskSet_Update"]
     }
 }
