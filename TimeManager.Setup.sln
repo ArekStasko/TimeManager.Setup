@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TimeManager.Setup", "TimeManager.Setup\TimeManager.Setup.csproj", "{9FDC9956-81E1-4202-8805-06EAB21CFBF0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeManager.SetupTool.Controllers", "TimeManager.SetupTool.Controllers\TimeManager.SetupTool.Controllers.csproj", "{42048510-F96C-4849-B5B3-034BF3447FEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeManager.SetupTool.Models", "TimeManager.SetupTool.Models\TimeManager.SetupTool.Models.csproj", "{F9CFAD8C-8177-470E-A030-23D8CF93D0B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeManager.SetupTool.Models", "TimeManager.SetupTool.Models\TimeManager.SetupTool.Models.csproj", "{B3CA9626-993C-44D9-A386-C6EC05D002E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeManager.SetupTool.Controllers", "TimeManager.SetupTool.Controllers\TimeManager.SetupTool.Controllers.csproj", "{8EB9F19A-500C-46B7-9801-EF889AD21610}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{9FDC9956-81E1-4202-8805-06EAB21CFBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9FDC9956-81E1-4202-8805-06EAB21CFBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9FDC9956-81E1-4202-8805-06EAB21CFBF0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{42048510-F96C-4849-B5B3-034BF3447FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{42048510-F96C-4849-B5B3-034BF3447FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{42048510-F96C-4849-B5B3-034BF3447FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{42048510-F96C-4849-B5B3-034BF3447FEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B3CA9626-993C-44D9-A386-C6EC05D002E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B3CA9626-993C-44D9-A386-C6EC05D002E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B3CA9626-993C-44D9-A386-C6EC05D002E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B3CA9626-993C-44D9-A386-C6EC05D002E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9CFAD8C-8177-470E-A030-23D8CF93D0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9CFAD8C-8177-470E-A030-23D8CF93D0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9CFAD8C-8177-470E-A030-23D8CF93D0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9CFAD8C-8177-470E-A030-23D8CF93D0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EB9F19A-500C-46B7-9801-EF889AD21610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EB9F19A-500C-46B7-9801-EF889AD21610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EB9F19A-500C-46B7-9801-EF889AD21610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EB9F19A-500C-46B7-9801-EF889AD21610}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
