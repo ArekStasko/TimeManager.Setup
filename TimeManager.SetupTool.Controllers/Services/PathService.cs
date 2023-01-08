@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimeManager.Setup.Services
+namespace TimeManager.SetupTool.Services
 {
     public static class PathService
     {

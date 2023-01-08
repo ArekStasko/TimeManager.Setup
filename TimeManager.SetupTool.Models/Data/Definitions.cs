@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace TimeManager.Setup.ConfigBuilder
+namespace TimeManager.SetupTool.Models
 {
     public class Definitions
     {

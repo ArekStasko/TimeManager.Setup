@@ -1,5 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-using TimeManager.Setup.CommandScheduler;
+﻿using TimeManager.Setup.CommandScheduler;
+using TimeManager.SetupTool.Controllers.Container;
 
 var scheduler = new Scheduler();
 while (true)

@@ -11,4 +11,8 @@
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TimeManager.SetupTool.Controllers\TimeManager.SetupTool.Controllers.csproj" />
+  </ItemGroup>
+
 </Project>

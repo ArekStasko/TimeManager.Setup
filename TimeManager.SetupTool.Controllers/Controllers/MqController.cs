@@ -1,19 +1,13 @@
-﻿using TimeManager.Setup.Services;
+﻿using TimeManager.SetupTool.Services;
+using TimeManager.SetupTool.Models;
 using Newtonsoft.Json;
+using LanguageExt.Common;
 
-namespace TimeManager.Setup.ConfigBuilder
+namespace TimeManager.SetupTool.Controllers
 {
-    public class MQDefinitionsBuilder
+    public class MqController : IMqController
     {
-        public Config configFile { get; set; }
-        public Definitions definitions { get; set; }
-
-
-        public MQDefinitionsBuilder()
-        {
-            configFile = BuildConfig();
-            definitions = BuildDefinitions();
-        }
+        private Config configFile { get; set; }
 
         private Config BuildConfig()
         {
@@ -22,7 +16,7 @@ namespace TimeManager.Setup.ConfigBuilder
             return JsonConvert.DeserializeObject<Config>(file);
         }
 
-        public Definitions BuildDefinitions()
+        private Definitions BuildDefinitions()
         {
             var definitions = new Definitions();
 
@@ -84,14 +78,26 @@ namespace TimeManager.Setup.ConfigBuilder
         }
 
 
-        public void Execute()
+        public Result<bool> Execute()
         {
-            var definitionsData = JsonConvert.SerializeObject(definitions);
-            string path = $"{PathService.GetConfigFilePath()}\\rabbitmq\\definitions.json";
+            try
+            {
+                var configFile = BuildConfig();
+                var definitions = BuildDefinitions();
+
+                var definitionsData = JsonConvert.SerializeObject(definitions);
+                string path = $"{PathService.GetConfigFilePath()}\\rabbitmq\\definitions.json";
 
 
-            FileService.CreateFile(path);
-            FileService.WriteData($"{PathService.GetConfigFilePath()}\\rabbitmq\\definitions.json", definitionsData);
+                FileService.CreateFile(path);
+                FileService.WriteData($"{PathService.GetConfigFilePath()}\\rabbitmq\\definitions.json", definitionsData);
+                return new Result<bool>(true);
+            }
+            catch (Exception ex)
+            {
+                return new Result<bool>(ex);
+            }
+            
         }
     }
 }

@@ -4,30 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TimeManager.Setup.CommandScheduler
+namespace TimeManager.Setup
 {
-    public class InputService
+    public class InputService : IInputService
     {
         private string[] UserChoice { get; set; }
-        private View view { get; set; } = new View();
-
-
 
         private string[] GetUserInput()
         {
-            var commands = view.GetAvailableCommands();
-
-            Console.Write("> ");
+            var writeService = ServiceContainer.WriteService;
+            writeService.Print("> ");
 
             string[] input = Console.ReadLine().Split(" ");
 
             while (input.Length < 2 || input.Length > 2)
             {
-                view.PrintInputInfo("Wrong Command");
+                writeService.PrintInput("Wrong Command");
 
-                Console.Write("> ");
                 input = Console.ReadLine().Split(" ");
             }
+
+            var result = ServiceContainer.Controllers.CommandsController.Execute();
+            var commands =
+
+            _ = result.Match<bool>(cmd =>
+            {
+                
+            }, exception =>
+            {
+
+            });
 
             while (!commands.AvailableCommands.Contains(input[1]) || commands.Alias != input[0])
             {
@@ -42,13 +48,14 @@ namespace TimeManager.Setup.CommandScheduler
 
         public void Execute()
         {
-            view.PrintInfo("Hello in TimeManager setup");
-            view.PrintAvailableCommands();
+            var writeService = ServiceContainer.WriteService;
+            writeService.Print("Hello in TimeManager setup");
+            writeService.PrintAvailableCommands();
+
             UserChoice = GetUserInput();
         }
 
         public string GetAlias() => UserChoice[0];
         public string GetCommand() => UserChoice[1];
-
     }
 }
