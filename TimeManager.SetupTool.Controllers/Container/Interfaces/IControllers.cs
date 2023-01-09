@@ -1,4 +1,5 @@
-﻿
+﻿using TimeManager.SetupTool.Controllers.Controllers;
+
 namespace TimeManager.SetupTool.Controllers.Container
 {
     public interface IControllers
@@ -6,5 +7,6 @@ namespace TimeManager.SetupTool.Controllers.Container
         public IMqController MqController { get; }
         public IDockerController DockerController { get; }
         public ICommandsController CommandsController { get; }
+        public ITestsController TestsController { get; }
     }
 }

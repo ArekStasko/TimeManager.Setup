@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vXbxP33gIKMK/srt/BI9zDDUw/zmPwQo+gG+qv9uxTAOIzaj2TWkQVLi9C4bTCT0HdVdUHVyStWYNjaFJ+0P2w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\areks\\source\\repos\\TimeManager\\TimeManager.SetupTool\\TimeManager.SetupTool.Models\\TimeManager.SetupTool.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\areks\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,15 @@
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\bin\Debug\net6.0\TimeManager.SetupTool.Controllers.deps.json
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\bin\Debug\net6.0\TimeManager.SetupTool.Controllers.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\bin\Debug\net6.0\TimeManager.SetupTool.Controllers.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\bin\Debug\net6.0\TimeManager.SetupTool.Models.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\bin\Debug\net6.0\TimeManager.SetupTool.Models.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\TimeManager.SetupTool.Controllers.csproj.AssemblyReference.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\TimeManager.SetupTool.Controllers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\TimeManager.SetupTool.Controllers.AssemblyInfoInputs.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\TimeManager.SetupTool.Controllers.AssemblyInfo.cs
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\TimeManager.SetupTool.Controllers.csproj.CoreCompileInputs.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\TimeManager.SetupTool.Controllers.csproj.CopyComplete
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\TimeManager.SetupTool.Controllers.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\refint\TimeManager.SetupTool.Controllers.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\TimeManager.SetupTool.Controllers.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Controllers\obj\Debug\net6.0\ref\TimeManager.SetupTool.Controllers.dll

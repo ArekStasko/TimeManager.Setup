@@ -1,4 +1,4 @@
 {
     "Alias": "timemanager",
-    "AvailableCommands": [ "all", "run-docker", "build-queues" ]
+    "AvailableCommands": [ "all", "run-docker", "build-queues", "test" ]
 }

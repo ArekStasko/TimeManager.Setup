@@ -8,5 +8,8 @@ namespace TimeManager.Setup
 {
     public interface IInputService
     {
+        public void Execute();
+        public string GetAlias();
+        public string GetCommand();
     }
 }

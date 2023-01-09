@@ -1,14 +1,9 @@
 ﻿using LanguageExt.Common;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using TimeManager.SetupTool.Models;
-using TimeManager.SetupTool.Services;
+using TimeManager.SetupTool.Controllers.Services;
 
-namespace TimeManager.SetupTool.Controllers
+namespace TimeManager.SetupTool.Controllers.Controllers
 {
     public class CommandsController : ICommandsController
     {

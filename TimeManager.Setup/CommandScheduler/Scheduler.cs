@@ -6,30 +6,41 @@ namespace TimeManager.Setup.CommandScheduler
     {
         private string command { get; set; }
         private string alias { get; set; }
+        private IWriteService writeService { get => ServiceContainer.WriteService; }
 
         private void RunMQBuilder()
         {
-                Console.WriteLine("Building MQ definitons started");
+                writeService.Print("Building MQ definitons started");
                 
                 var MQBuilder = ServiceContainer.Controllers.MqController;
                 MQBuilder.Execute();
 
-                Console.WriteLine("--- MQ DEFINITIONS BUILD SUCCEDED ---");
+               writeService.Print("--- MQ DEFINITIONS BUILD SUCCEDED ---");
         }
 
         private void RunDocker()
         {
-                Console.WriteLine("Running docker compose build");
+                writeService.Print("Running docker compose build");
 
                 var dockerController = ServiceContainer.Controllers.DockerController;
                 dockerController.Execute();
 
-                Console.WriteLine("--- DOCKER COMPOSE BUILD SUCCEDED");
+                writeService.Print("--- DOCKER COMPOSE BUILD SUCCEDED");
+        }
+
+        private void RunTests()
+        {
+            writeService.Print("STARTING TIMEMANAGER TESTS");
+            
+            var testsController = ServiceContainer.Controllers.TestsController;
+            testsController.Execute();
+
+            writeService.Print("TIMEMANAGER TESTS DONE");
         }
 
         public void Schedule()
         {
-            var inputService = new InputService();
+            var inputService = ServiceContainer.InputService;
             inputService.Execute();
 
             alias = inputService.GetAlias();
@@ -48,6 +59,9 @@ namespace TimeManager.Setup.CommandScheduler
                         break;
                     case "build-queues":
                         RunMQBuilder();
+                        break;
+                    case "test":
+                        RunTests();
                         break;
                 }
             }

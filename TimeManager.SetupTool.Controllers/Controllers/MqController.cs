@@ -1,9 +1,9 @@
-﻿using TimeManager.SetupTool.Services;
+﻿using TimeManager.SetupTool.Controllers.Services;
 using TimeManager.SetupTool.Models;
 using Newtonsoft.Json;
 using LanguageExt.Common;
 
-namespace TimeManager.SetupTool.Controllers
+namespace TimeManager.SetupTool.Controllers.Controllers
 {
     public class MqController : IMqController
     {

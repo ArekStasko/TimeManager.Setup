@@ -1,8 +1,8 @@
-﻿using TimeManager.SetupTool.Services;
+﻿using TimeManager.SetupTool.Controllers.Services;
 using LanguageExt.Common;
 using System.Diagnostics;
 
-namespace TimeManager.SetupTool.Controllers
+namespace TimeManager.SetupTool.Controllers.Controllers
 {
     public class DockerController : IDockerController
     {

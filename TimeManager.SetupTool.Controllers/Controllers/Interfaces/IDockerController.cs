@@ -1,7 +1,7 @@
 ﻿
 using LanguageExt.Common;
 
-namespace TimeManager.SetupTool.Controllers
+namespace TimeManager.SetupTool.Controllers.Controllers
 {
     public interface IDockerController
     {

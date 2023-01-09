@@ -10,8 +10,8 @@ namespace TimeManager.SetupTool.Controllers.Container
             var container = new ContainerBuilder();
 
             container.RegisterAssemblyTypes(Assembly.GetExecutingAssembly())
-                .Where(t => t.Namespace == "TimeManager.SetupTool.Controllers")
-                .As(t => t.GetInterfaces().FirstOrDefault(t => t.Name == "I" + t.Name));
+                .Where(t => t.Namespace == "TimeManager.SetupTool.Controllers.Controllers")
+                .As(t => t.GetInterfaces().FirstOrDefault(i => i.Name == "I" + t.Name));
 
             return container.Build();
         }

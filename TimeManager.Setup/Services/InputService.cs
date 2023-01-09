@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LanguageExt.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,7 +14,7 @@ namespace TimeManager.Setup
         private string[] GetUserInput()
         {
             var writeService = ServiceContainer.WriteService;
-            writeService.Print("> ");
+            writeService.PrintInput("> ");
 
             string[] input = Console.ReadLine().Split(" ");
 
@@ -25,25 +26,21 @@ namespace TimeManager.Setup
             }
 
             var result = ServiceContainer.Controllers.CommandsController.Execute();
-            var commands =
 
-            _ = result.Match<bool>(cmd =>
+            return result.Match<string[]>(cmd =>
             {
-                
+                while (!cmd.AvailableCommands.Contains(input[1]) || cmd.Alias != input[0])
+                {
+                    writeService.PrintInput("Wrong Command");
+
+                    Console.Write("> ");
+                    input = Console.ReadLine().Split(" ");
+                }
+                return input;
             }, exception =>
             {
-
+                throw exception;
             });
-
-            while (!commands.AvailableCommands.Contains(input[1]) || commands.Alias != input[0])
-            {
-                view.PrintInputInfo("Wrong Command");
-
-                Console.Write("> ");
-                input = Console.ReadLine().Split(" ");
-            }
-
-            return input;
         }
 
         public void Execute()
