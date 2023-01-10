@@ -1,0 +1,12 @@
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\bin\Release\net6.0\TimeManager.SetupTool.Models.deps.json
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\bin\Release\net6.0\TimeManager.SetupTool.Models.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\bin\Release\net6.0\TimeManager.SetupTool.Models.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\TimeManager.SetupTool.Models.csproj.AssemblyReference.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\TimeManager.SetupTool.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\TimeManager.SetupTool.Models.AssemblyInfoInputs.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\TimeManager.SetupTool.Models.AssemblyInfo.cs
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\TimeManager.SetupTool.Models.csproj.CoreCompileInputs.cache
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\TimeManager.SetupTool.Models.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\refint\TimeManager.SetupTool.Models.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\TimeManager.SetupTool.Models.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.SetupTool.Models\obj\Release\net6.0\ref\TimeManager.SetupTool.Models.dll

@@ -15,3 +15,10 @@ C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\
 C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.pdb
 C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\TimeManager.Setup.genruntimeconfig.cache
 C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\obj\Release\net6.0\ref\TimeManager.Setup.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\Autofac.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\LanguageExt.Core.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.SetupTool.Controllers.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.SetupTool.Models.dll
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.SetupTool.Controllers.pdb
+C:\Users\areks\source\repos\TimeManager\TimeManager.SetupTool\TimeManager.Setup\bin\Release\net6.0\TimeManager.SetupTool.Models.pdb
