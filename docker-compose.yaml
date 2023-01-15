@@ -19,6 +19,14 @@ services:
   container_name: timemanager.gateway
   ports:
    - "8070:80"
+   - "8081:442"
+  environment:
+    ASPNETCORE_URLS: "https://+;http://+"
+    ASPNETCORE_HTTPS: "8081"
+    ASPNETCORE_ENVIRONMENT: Development
+  volumes:
+   - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+   - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https
   depends_on:
    - mssql-server
    - rabbitmq
@@ -53,18 +61,25 @@ services:
  timemanager.processingengine:
   build: ../TimeManager.ProcessingEngine
   container_name: timemanager.processingengine
+  ports:
+   - "8060:80"
+   - "8075:444"
   environment:
    DatabaseServer: "mssql-server"
    DatabasePort: "1433"
    DatabaseUser: "sa"
    DatabasePassword: "Password.1234"
    DatabaseName: "TimeManager_ProcessingEngine"
+   ASPNETCORE_URLS: "https://+;http://+"
+   ASPNETCORE_HTTPS: "8075"
+   ASPNETCORE_ENVIRONMENT: Development
   restart: unless-stopped
+  volumes:
+   - ${APPDATA}\microsoft\UserSecrets\:/root/.microsoft/usersecrets
+   - ${USERPROFILE}\.aspnet\https:/root/.aspnet/https
   depends_on:
    - timemanager.idp
    - timemanager.data
-  ports:
-   - "8060:80"
  seq:
   image: datalust/seq:latest
   container_name: timemanager.logs.seq
