@@ -19,7 +19,7 @@ services:
   container_name: timemanager.gateway
   ports:
    - "8070:80"
-   - "8081:442"
+   - "8081:443"
   environment:
     ASPNETCORE_URLS: "https://+;http://+"
     ASPNETCORE_HTTPS: "8081"
