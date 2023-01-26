@@ -82,7 +82,7 @@ namespace TimeManager.SetupTool.Controllers.Controllers
         {
             try
             {
-                var configFile = BuildConfig();
+                configFile = BuildConfig();
                 var definitions = BuildDefinitions();
 
                 var definitionsData = JsonConvert.SerializeObject(definitions);
